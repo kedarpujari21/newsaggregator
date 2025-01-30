@@ -1,0 +1,137 @@
+/* Banner Styles */
+.banner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0; /* Ensure the banner itself is below other elements */
+  min-height: 70vh;
+}
+
+.content {
+  width: 50vw;
+  z-index: 10;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 1.5rem 0;
+  opacity: 0;
+  animation: slideInDown 1.5s ease-in forwards;
+}
+
+.subtitle {
+  color: black;
+  font-size: 1.25rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  background: url('src/assets/cover.jpg') center/cover no-repeat;
+  animation: fadeIn 3s ease-in-out forwards;
+  border-radius: 28px;
+}
+
+.fadeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 6rem; /* For larger screens */
+  }
+
+  .subtitle {
+    font-size: 2rem; /* For larger screens */
+  }
+}
+
+/* Button Styles */
+.readbtn {
+  background-color: #FF6F61; /* A nice red-orange color */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: center;
+  z-index: 20; /* Ensure button is on top of other elements */
+  position: relative; /* Ensure it is positioned correctly in the flow */
+  animation: fadeInUp 1s ease-out;
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.readbtn:hover {
+  transform: scale(1.05); /* Slightly increase button size */
+  background-color: #FF4A3B; /* Change background color on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.readbtn:active {
+  transform: scale(1); /* Reset scale when clicked */
+  background-color: #FF5733; /* Slightly darker color when clicked */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional - Button Animation when it enters the page */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

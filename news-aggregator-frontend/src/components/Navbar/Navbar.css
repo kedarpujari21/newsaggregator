@@ -1,0 +1,118 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:linear-gradient(to right, #e52d27, #ff6a00);
+    padding: 20px 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+.nav-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.navbar-links{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-size: 28px; 
+    transition: font-size 0.1s step-end;
+    font-weight: bold;
+    color: #ecf0f1;
+    font-size: 16px;
+}
+
+.navbar-links a:hover {
+    font-size: 20px; /* Slightly larger on hover */
+    color: white;
+  }
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    padding: 10px;
+    margin: 14px;
+    background-color: black;
+    border-radius: 4px;
+    list-style-type: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .btn{
+    background-color: antiquewhite;
+    color: black;
+    padding: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  .navbar-actions a:hover {
+    font-size: 20px; /* Slightly larger on hover */
+  }
+
+  /*Hamburger CSS*/
+
+  .hamburger{
+    display: none;
+    flex-direction: column;
+    gap:4px;
+    cursor: pointer;
+    justify-content: space-around;
+  }
+
+  .hamburger .bar{
+    width: 10px;
+    height: 5px;
+    background-color: black;
+    border-radius: 3px;
+  }
+
+  /*Responsive CSS*/
+  @media (max-width: 768px) {
+    .navbar-links{
+      display: none;
+      flex-direction: column;
+      background-color: #ff6a00;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+
+    .navbar-links.active{
+      display: flex;
+    }
+
+    .navbar-actions{
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+  }
+  @media (max-width: 480px) {
+    .nav-logo a {
+      font-size: 20px;
+    }
+  
+    .navbar-links li a {
+      font-size: 14px;
+    }
+  }

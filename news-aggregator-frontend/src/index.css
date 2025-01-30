@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Ensures the entire page takes full height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* This ensures the content takes the available space, leaving space for the footer */
+.main-content {
+  flex: 1; /* Allows content to take all remaining space */
+  padding-bottom: 160px; /* Adds space to prevent overlap with footer */
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
