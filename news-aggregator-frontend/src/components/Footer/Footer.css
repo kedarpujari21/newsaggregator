@@ -1,0 +1,47 @@
+.footer {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to right, #333333, #1d1d1d);
+    height: 160px; /* Fixed footer height */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Footer Title */
+.footer .footer-title {
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Ensure proper layout of the page and prevent overlap with footer */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Add space at the bottom for content to not overlap the footer */
+.main-content {
+    padding-bottom: 160px; /* Same as the footer's height */
+}
+
+/* Responsive Style for small screens */
+@media (max-width: 768px) {
+    .footer .footer-title {
+        font-size: 16px;
+        padding: 30px;
+    }
+}
+
+/* Responsive Style for very small screens */
+@media (max-width: 480px) {
+    .footer .footer-title {
+        font-size: 14px;
+        padding: 25px;
+    }
+}
